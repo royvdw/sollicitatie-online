@@ -1,4 +1,6 @@
-// Imports of styling we're using
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans&display=swap');
+
+// Imports of styling we're using and global styles
 @import './variables';
 @import './mixins';
 @import './normalize';
@@ -6,3 +8,13 @@
 @import './layout/layout';
 @import './blocks/blocks';
 @import './components/components';
+
+h1 { @include heading-1; }
+h2 { @include heading-2; }
+h3 { @include heading-3; }
+h4 { @include heading-4; }
+
+* {
+  font-family: $--ba-font-secondary;
+}
+

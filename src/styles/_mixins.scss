@@ -1,1 +1,61 @@
-//Create mixins like grid templates flex boxes and more here!
+//Create mixins like breakpoints flex boxes and more here!
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+  }
+}
+
+@mixin content-container {
+  max-width: 100%;
+
+  @include breakpoint(desktop) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+@mixin heading {
+  font-family: $--ba-font-primary;
+}
+
+@mixin heading-1 {
+  @include heading;
+  font-size: 3.375em;
+}
+
+@mixin heading-2 {
+  @include heading;
+  font-size: 2.966em;
+}
+
+@mixin heading-3 {
+  @include heading;
+  font-size: 1.5em;
+}
+
+@mixin heading-4 {
+  @include heading;
+  font-size: 1.318em;
+}
+
+@mixin heading-5 {
+  @include heading;
+  font-size: 1em;
+}
+
+@mixin heading-6 {
+  @include heading;
+  font-size: 0.875em;
+}
