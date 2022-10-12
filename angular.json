@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "angular-quickstart-project-ba"
+  "cli": {
+    "analytics": false
+  }
 }
