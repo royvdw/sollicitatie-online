@@ -1,0 +1,19 @@
+{{ loginForm.value | json }}
+
+<form [formGroup]="loginForm" (submit)="loginAction()">
+  <input type="text" formControlName="email" placeholder="E-mail address">
+  <input type="password" formControlName="password" placeholder="Password">
+
+  <button type="submit">
+    Login
+  </button>
+</form>
+
+<form [formGroup]="createAccountForm" (submit)="createAccountAction()">
+  <input type="text" formControlName="email" placeholder="E-mail address">
+  <input type="password" formControlName="password" placeholder="Password">
+
+  <button type="submit">
+    Create account
+  </button>
+</form>

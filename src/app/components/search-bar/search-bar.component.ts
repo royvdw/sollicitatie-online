@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ba-search-bar',
+  selector: 'so-search-bar',
   templateUrl: './search-bar.component.html',
   styles: [
   ]

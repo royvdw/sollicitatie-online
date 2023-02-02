@@ -14,6 +14,19 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { AccountDropdownComponent } from './components/account-dropdown/account-dropdown.component';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {LoginPromptComponent} from "./blocks/login-prompt/login-prompt.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {AngularFireModule} from "@angular/fire/compat";
+import {AuthService} from "./_services/auth/auth.service";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import {environment} from "../environments/environment";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import {UserEffects} from "./store/effects/user.effects";
 
 @NgModule({
   declarations: [
@@ -25,16 +38,29 @@ import { AppRoutingModule } from './app-routing.module';
     DefaultNavComponent,
     SearchBarComponent,
     AccountDropdownComponent,
-    MainNavigationComponent
+    MainNavigationComponent,
+    LoginPageComponent,
+    LoginPromptComponent,
+    DashboardPageComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([
+      UserEffects
+    ]),
     StoreDevtoolsModule.instrument({ maxAge: 25 }),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

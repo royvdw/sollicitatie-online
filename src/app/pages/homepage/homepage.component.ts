@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ba-homepage',
+  selector: 'so-homepage',
   templateUrl: './homepage.component.html',
   styles: [
   ]

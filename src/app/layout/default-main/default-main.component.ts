@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ba-default-main',
+  selector: 'so-default-main',
   templateUrl: './default-main.component.html',
   styles: [
   ]

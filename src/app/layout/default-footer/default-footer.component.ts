@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ba-default-footer',
+  selector: 'so-default-footer',
   templateUrl: './default-footer.component.html',
   styles: [
   ]
