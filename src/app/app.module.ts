@@ -13,6 +13,7 @@ import { DefaultNavComponent } from './blocks/default-nav/default-nav.component'
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AccountDropdownComponent } from './components/account-dropdown/account-dropdown.component';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
     BrowserModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25 })
+    StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

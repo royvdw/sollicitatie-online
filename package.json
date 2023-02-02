@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart-project-ba",
+  "name": "sollicitatie-online",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -14,6 +14,7 @@
     "@angular/common": "^14.2.5",
     "@angular/compiler": "^14.2.5",
     "@angular/core": "^14.2.5",
+    "@angular/fire": "^7.5.0",
     "@angular/forms": "^14.2.5",
     "@angular/platform-browser": "^14.2.5",
     "@angular/platform-browser-dynamic": "^14.2.5",
